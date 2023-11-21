@@ -1,0 +1,103 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/8a80b728dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="has-background-lightgray p-4 m-3 has-background-grey-lighter">
+      <h2 class="title is-4">Task 2</h2>
+      <p class="has-text-weight-bold">Show all teams in Spain.</p>
+      <p id="p2q1"></p>
+      <br />
+      <p class="has-text-weight-bold">Show all teams in Madrid, Spain</p>
+      <p id="p2q2"></p>
+      <br />
+      <p class="has-text-weight-bold">
+        Show all national teams (Remember there might be new national teams
+        added later)
+      </p>
+      <p id="p2q3"></p>
+      <br />
+      <p class="has-text-weight-bold">Show all teams that are not in Spain</p>
+      <p id="p2q4"></p>
+      <br />
+      <p class="has-text-weight-bold">
+        Show all teams that are not in Spain or England
+      </p>
+      <p id="p2q5"></p>
+      <br />
+      <p class="has-text-weight-bold">
+        Show all teams in Spain with more than 700M fans
+      </p>
+      <p id="p2q6"></p>
+      <br />
+      <p class="has-text-weight-bold">
+        Show all teams with a number of fans in the range of 500M and 600M
+      </p>
+      <p id="p2q7"></p>
+      <br />
+      <p class="has-text-weight-bold">
+        Show all teams where Ronaldo is a top scorer
+      </p>
+      <p id="p2q8"></p>
+      <br />
+      <p class="has-text-weight-bold">
+        Show all teams where Ronaldo, Maradona, or Messi is a top scorer
+      </p>
+      <p id="p2q9"></p>
+    </div>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // TODO
+      // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+      // Your web app's Firebase configuration
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyB2ipbHDgh418vrInlo7G6ap02bCNvbmRg",
+        authDomain: "firestorequeryactivity-9e2d8.firebaseapp.com",
+        projectId: "firestorequeryactivity-9e2d8",
+        storageBucket: "firestorequeryactivity-9e2d8.appspot.com",
+        messagingSenderId: "803520154487",
+        appId: "1:803520154487:web:0a7abce63581978248af72",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+  </body>
+</html>
